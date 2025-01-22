@@ -24,8 +24,31 @@ describe("Amazon sayfasina giris", ()=>{
         
     });
 
-    it('', () => {
+    it('Anasayfaya gerş dön', () => {
         
+        //Tarayıcıda geri gitme
+        cy.go('back');
+
+        //Tarayıcıda ileri gitmek için cy.go('forward')
     });
     
+    it('Kategorilerden Elektronik seç', () => {
+
+        cy.get('#searchDropdownBox').select('Elektronik');    
+    });
+
+    it('Profilim sayfasina git', () => {
+        
+        cy.get('#nav-link-accountList').click();
+    });
+
+    it('Bir hesap olusturun', () => {
+        
+        cy.xpath("//input[@id='sp-cc-accept']").click();
+
+        //Assertion
+        cy.get('.a-size-medium-plus').should("contain","Giriş yapın veya hesap oluşturun");
+
+    });
+
     });
