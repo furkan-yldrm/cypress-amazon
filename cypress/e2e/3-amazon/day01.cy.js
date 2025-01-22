@@ -3,15 +3,20 @@ describe("Amazon sayfasina giris", ()=>{
     it("Tarayiciyi başlat ve Amazon sayfasina git",()=>{
     
         //Amazon adresine git
-        cy.visit("https://www.amazon.com.tr/");
+        cy.visit("/");
         
-        cy.wait(2000);
+        cy.wait(1000);
     })
     
     it('Çerezleri kabul et', () => {
         
         //Çerezleri kabul et
         cy.xpath("//input[@id='sp-cc-accept']").click();
+    });
+
+    it('Url kontrol et', () => {
+        
+        cy.url().should('include','amazon');
     });
     
     it('Arama kutusuna bir ürün yaz', () => {
