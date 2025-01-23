@@ -1,4 +1,4 @@
-describe("Etsy Test",()=>{
+describe("Trendyol Deneme",()=>{
 
 
 
@@ -25,6 +25,8 @@ it('Ürün ara, Fiyata göre listele, Sepete Ekle', () => {
 
     cy.get(':nth-child(6) > [data-testid="suggestion-item"]').click();
 
+    //YOU HAVE BEEN BLOCKED! 
+    // SH*T
     
 });
 
